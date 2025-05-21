@@ -1,0 +1,181 @@
+/* ===== Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #E63946;
+  position: relative;
+  font-size: 20px;
+}
+.site-name {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: cursive;
+  color: white;
+}
+
+/* ===== Navigation ===== */
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.navigation a:hover {
+  color: #ffcc00;
+}
+
+/* Hamburger (for small screens) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 1001;
+}
+
+/* ===== Menu Container ===== */
+.menu-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+/* ===== Pizza Card ===== */
+.pizza-card {
+  flex: 0 0 auto;
+  width: 300px;
+  padding: 20px;
+  background: #333;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Pizza Image / Slider ===== */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 15px;
+}
+
+.pizza-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Slider Buttons (Optional – needs JS) */
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+/* ===== Toppings & Size Selectors ===== */
+.toppings,
+.size {
+  margin-top: 10px;
+}
+
+.toppings label,
+.size label {
+  display: block;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* ===== Order Button ===== */
+.order-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #E63946;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #d22c3c;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    background: #E63946;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .navigation.open {
+    display: flex;
+  }
+
+  .menu-container {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .pizza-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}

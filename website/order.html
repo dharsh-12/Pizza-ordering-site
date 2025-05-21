@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Place Your Order</title>
+   <link rel="stylesheet" href="../css/style.css"> <!-- Reuse the same CSS for consistency -->
+    <style>
+        .order-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #2c2c2c;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.2);
+            text-align: left;
+        }
+
+        .order-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .order-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .order-form input, .order-form textarea, .order-form select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        .order-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #E63946;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .order-form button:hover {
+            background-color: #d62839;
+        }
+    </style>
+</head>
+<body>
+
+  <header>
+    <div class="site-name">Pizza Planet</div>
+    <button class="hamburger">☰</button>
+<nav class="navigation">
+
+       <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+<div class="order-container">
+    <h2>Place Your Order</h2>
+    <form class="order-form" onsubmit="submitOrder(event)">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" rows="4" required></textarea>
+
+        <label for="pizza">Select Pizza:</label>
+        <select id="pizza" required>
+            <option value="">-- Choose a pizza --</option>
+            <option value="Margherita">Margherita</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Veggie Supreme">Veggie Supreme</option>
+            <option value="BBQ Chicken">BBQ Chicken</option>
+            <option value="Hawaiian">Hawaiian</option>
+            <option value="Paneer Tikka">Paneer Tikka</option>
+        </select>
+
+        <label for="size">Select Size:</label>
+        <select id="size" required>
+            <option value="">-- Choose size --</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select>
+
+        <label for="toppings">Extra Toppings:</label>
+        <input type="text" id="toppings" placeholder="e.g., Olives, Mushrooms">
+
+        <button type="submit">Submit Order</button>
+    </form>
+</div>
+
+<script defer>
+    function submitOrder(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const address = document.getElementById("address").value;
+        const pizza = document.getElementById("pizza").value;
+        const size = document.getElementById("size").value;
+        const toppings = document.getElementById("toppings").value;
+
+        alert(`Thank you, ${name}!\n\nYour ${size} ${pizza} pizza with ${toppings || "no extra toppings"} will be delivered to:\n${address}`);
+        
+        // You can also redirect or clear the form here:
+        // document.querySelector(".order-form").reset();
+        // window.location.href = "index.html";
+    }
+
+    
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".navigation");
+
+    hamburger.addEventListener("click", function () {
+      nav.classList.toggle("open");
+    });
+  });
+</script>
+
+
+</body>
+</html>

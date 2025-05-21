@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Menu</title>
+  <link rel="stylesheet" href="../css/menu-style.css">
+    
+    
+</head>
+<body>
+    <header>
+    <div class="site-name">Pizza Planet</div>
+    
+    <button class="hamburger">☰</button>
+<nav class="navigation">
+       <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+    <div class="menu-container">
+        <div class="pizza-card">
+            <h2>Veg Pizza</h2>
+            <div class="slider">
+                <img class="pizza-slide" src="../images/veg.jpg" alt="veg Pizza">
+            </div>
+           
+        
+            <div class="toppings">
+                <label><input type="checkbox"> Peri Peri</label>
+                <label><input type="checkbox"> Pepperoni</label>
+                <label><input type="checkbox"> Cheese</label>
+            </div>
+            
+            <div class="size">
+                <label>Choose Size:</label>
+                <select>
+                    <option>Regular</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+            </div>
+            <button class="order-btn" onclick="window.location.href='order.html'">Order</button>
+        </div>
+
+        <!-- Repeat the above pizza-card for other pizzas -->
+        <div class="pizza-card">
+            <h2>Paneer Pizza</h2>
+            <div class="slider">
+               <img class="pizza-slide" src="../images/paneer.jpg" alt="paneer Pizza">
+            </div>
+            
+            
+            <div class="toppings">
+                <label><input type="checkbox"> Peri Peri</label>
+                <label><input type="checkbox"> Pepperoni</label>
+                <label><input type="checkbox"> Cheese</label>
+            </div>
+            
+            <div class="size">
+                <label>Choose Size:</label>
+                <select>
+                    <option>Regular</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+            </div>
+            <button class="order-btn" onclick="window.location.href='order.html'">Order</button>
+        </div>
+
+        <!-- Repeat for Mushroom, Cheesy, Capsicum Corn, Chicken Pizza -->
+        <div class="pizza-card">
+            <h2>Mushroom Pizza</h2>
+            <div class="slider">
+              <img class="pizza-slide"src="../images/mushroom.jpg" alt="mushroom Pizza">
+            </div>
+            
+            <div class="toppings">
+                <label><input type="checkbox"> Peri Peri</label>
+                <label><input type="checkbox"> Pepperoni</label>
+                <label><input type="checkbox"> Cheese</label>
+            </div>
+            
+            <div class="size">
+                <label>Choose Size:</label>
+                <select>
+                    <option>Regular</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+            </div>
+            <button class="order-btn" onclick="window.location.href='order.html'">Order</button>
+        </div>
+        <div class="pizza-card">
+            <h2>Chicken Pizza</h2>
+            <div class="slider">
+               <img class="pizza-slide" src="../images/chicken.jpg" alt="chicken Pizza">
+            </div>
+          
+            
+            <div class="toppings">
+                <label><input type="checkbox"> Peri Peri</label>
+                <label><input type="checkbox"> Pepperoni</label>
+                <label><input type="checkbox"> Cheese</label>
+            </div>
+            
+            <div class="size">
+                <label>Choose Size:</label>
+                <select>
+                    <option>Regular</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+            </div>
+            <button class="order-btn" onclick="window.location.href='order.html'">Order</button>
+        </div>
+        <div class="pizza-card">
+            <h2>Cheesy Pizza</h2>
+            <div class="slider">
+                <img class="pizza-slide"src="../images/cheesy.jpg" alt="cheesy Pizza">
+            </div>
+           
+            
+            <div class="toppings">
+                <label><input type="checkbox"> Peri Peri</label>
+                <label><input type="checkbox"> Pepperoni</label>
+                <label><input type="checkbox"> Cheese</label>
+            </div>
+            
+            <div class="size">
+                <label>Choose Size:</label>
+                <select>
+                    <option>Regular</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+            </div>
+            <button class="order-btn" onclick="window.location.href='order.html'">Order</button>
+        </div>
+        <div class="pizza-card">
+            <h2>CornCapsicum Pizza</h2>
+            <div class="slider">
+              <img class="pizza-slide" src="../images/capsicum.jpg" alt="capsicum Pizza">
+            </div>
+           
+            
+            <div class="toppings">
+                <label><input type="checkbox"> Peri Peri</label>
+                <label><input type="checkbox"> Pepperoni</label>
+                <label><input type="checkbox"> Cheese</label>
+            </div>
+            
+            <div class="size">
+                <label>Choose Size:</label>
+                <select>
+                    <option>Regular</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+            </div>
+            <button class="order-btn" onclick="window.location.href='order.html'">Order</button>
+        </div>
+
+    </div>
+
+     <script src="../js/menu-script.js"></script>
+<!-- Add this script at the end of the body -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".navigation");
+
+    hamburger.addEventListener("click", function () {
+      nav.classList.toggle("open");
+    });
+  });
+</script>
+
+
+
+</body>
+</html>

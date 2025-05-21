@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Pizza Planet</title>
+ <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="site-name">Pizza Planet</div>
+    <button class="hamburger">☰</button>
+<nav class="navigation">
+
+       <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section style="padding: 40px 20px;">
+    <h1>About Us</h1>
+    <p style="max-width: 700px; margin: 20px auto; font-size: 18px; line-height: 1.6;">
+      At Pizza Planet, we believe pizza should be more than just food—it should be a celebration of flavor, creativity, and community. 
+      Our mission is to deliver freshly baked, handcrafted pizzas made with the finest ingredients, straight from our oven to your heart.
+    </p>
+
+    <p style="max-width: 700px; margin: 20px auto; font-size: 18px; line-height: 1.6;">
+      Whether you're craving a classic Margherita, a spicy Pepperoni, or something adventurous, we've got a slice for every mood. 
+      We pride ourselves on friendly service, fast delivery, and a passion for all things pizza. Welcome to the planet of taste!
+    </p>
+  </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".navigation");
+
+    if (hamburger && nav) {
+      hamburger.addEventListener("click", function () {
+        nav.classList.toggle("open");
+      });
+    }
+  });
+</script>
+
+
+</body>
+</html>
